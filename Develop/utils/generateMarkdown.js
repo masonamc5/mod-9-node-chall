@@ -31,6 +31,42 @@ This project is licensed under the ${license} license. See the [${license} Licen
 function generateMarkdown(data) {
   return `# ${data.title}
 
+${renderLicenseBadge(data.license)}
+
+## Description
+
+${data.description}
+
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
+
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+${renderLicenseSection(data.license)}
+
+## Contributing
+
+${data.contributing}
+
+## Tests
+
+${data.tests}
+
+## Questions
+
+For questions about the project, please feel free to contact me via GitHub: [${data.github}](https://github.com/${data.github}) or via email at ${data.email}.
 `;
 }
 
