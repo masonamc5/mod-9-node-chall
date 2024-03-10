@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if (license) {
     return `[![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})`;
   }
-  return '';
+  return "";
 }
 
 // TODO: Create a function that returns the license link
@@ -13,7 +13,7 @@ function renderLicenseLink(license) {
   if (license) {
     return `[License](https://opensource.org/licenses/${license})`;
   }
-  return '';
+  return "";
 }
 
 // TODO: Create a function that returns the license section of README
@@ -22,20 +22,23 @@ function renderLicenseSection(license) {
   if (license) {
     return `## License
 
-This project is licensed under the ${license} license. See the [${license} License](${renderLicenseLink(license)}) for details.`;
+This project is licensed under the ${license} license. See the [${license} License](${renderLicenseLink(
+      license
+    )}) for details.`;
   }
-  return '';
+  return "";
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(answers) {
+  console.log(answers);
+  return `# ${answers.Title}
 
-${renderLicenseBadge(data.license)}
+${renderLicenseBadge(answers.License)}
 
 ## Description
 
-${data.description}
+${answers.Description}
 
 ## Table of Contents
 
@@ -48,26 +51,29 @@ ${data.description}
 
 ## Installation
 
-${data.installation}
+${answers.Installation}
 
 ## Usage
 
-${data.usage}
+${answers.Usage}
 
-${renderLicenseSection(data.license)}
+${renderLicenseSection(answers.License)}
 
 ## Contributing
 
-${data.contributing}
+${answers.Contributions}
 
 ## Tests
 
-${data.tests}
+${answers.Tests}
 
 ## Questions
 
-For questions about the project, please feel free to contact me via GitHub: [${data.github}](https://github.com/${data.github}) or via email at ${data.email}.
+For questions about the project, please feel free to contact me via GitHub: [${
+    answers.Username
+  }](https://github.com/${answers.Username}) or via email at ${answers.Email}.
 `;
-}
+
+} 
 
 module.exports = generateMarkdown;
