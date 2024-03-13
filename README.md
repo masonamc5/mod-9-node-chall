@@ -6,7 +6,7 @@
 
 This tool allows you to make readme in seconds. It uses node.js to make a command line application that lets you make a readme by answering a couple simple questions. I formats it very nice for you and has everything you need for a professional readme.
 
-![readme pic](./develop/images/readme.png)
+![readme pic](./Develop/images/readme.png)
 
 ## Table of Contents
 
